@@ -26,6 +26,6 @@ jobs:
           port: 22
           username: ${{secrets.ALIYUN_NAME}}
           password: ${{secrets.AIYUN_PASSWORD}}
-          source: 'dist/'
+          source: '../../'
           target: '/root/nginx/upload-server'
           
