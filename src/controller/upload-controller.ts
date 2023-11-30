@@ -6,6 +6,7 @@ class upLoadController {
   upload = async (ctx) => {
     const { originalFilename, newFilename } = ctx.request.files.file;
     const url = this.service.upload(originalFilename, newFilename);
+    console.log(url);
     ctx.body = url ;
   };
 }
