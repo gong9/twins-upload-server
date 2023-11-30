@@ -15,10 +15,6 @@ jobs:
       - uses: pnpm/action-setup@v2.2.2
         with:
           version: 7
-      - name: install
-        run: pnpm install --no-frozen-lockfile
-      - name: build
-        run: pnpm build
       - name: scp
         uses: appleboy/scp-action@v0.1.4
         with:
