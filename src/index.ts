@@ -1,15 +1,15 @@
 import * as Koa from 'koa';
 import * as Router from 'koa-router';
 import * as cors from '@koa/cors'
-import  koaBody  from 'koa-body';
+import koaBody  from 'koa-body';
 import * as path from 'path';
 import * as koaStatic from 'koa-static';
-
-import { PORT } from './config';
 import AppRoutes from './routes';
 
 const app = new Koa();
 const router = new Router();
+
+const PORT = 8010
 
 
 AppRoutes.forEach(route => router[route.method](route.path, route.action));
