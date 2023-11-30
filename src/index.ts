@@ -9,7 +9,7 @@ import AppRoutes from './routes';
 const app = new Koa();
 const router = new Router();
 
-const PORT = 8010
+const PORT = 3000
 
 
 AppRoutes.forEach(route => router[route.method](route.path, route.action));
