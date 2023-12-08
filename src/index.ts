@@ -14,9 +14,9 @@ const PORT = 3000
 
 AppRoutes.forEach(route => router[route.method](route.path, route.action));
 
+app.use(cors());
 app.use(koaStatic(path.resolve(__dirname, '../uploads')));
 app.use(koaStatic(path.resolve(__dirname, '../public')));
-app.use(cors());
 app.use(koaBody({
     multipart: true, // support file upload
     formidable: {
